@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehículos</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
     <style>
         /* Ajuste de la sidebar */
         .sidebar {
@@ -58,7 +59,8 @@
 
         /* Ajuste del contenido principal */
         .main-content {
-            margin-left: 250px; /* Ajusta este valor si cambias el ancho de la sidebar */
+            margin-left: 250px;
+            /* Ajusta este valor si cambias el ancho de la sidebar */
             padding: 80px 20px 20px 20px;
             transition: margin-left 0.3s ease;
         }
@@ -104,7 +106,6 @@
             <li><a href="Mover.html">Mover</a></li>
             <li><a href="MarcarVehiculo.html">Marcar</a></li>
             <li><a href="Vehiculo.html">Vehículo</a></li>
-            <li><a href="Consulta.html">Consulta</a></li>
         </ul>
     </div>
 
@@ -131,36 +132,40 @@
                 <a href="AgregarVehiculo.html" class="button">
                     <img src="IMG/add-icon.png" alt="Agregar QR"> Agregar vehículo
                 </a>
+            </div>
+
+            <!-- Tabla de vehículos -->
+            <div class="table-container">
+                <table id="tablaVehiculos">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Color</th>
+                            <th>Tapiceria</th>
+                            <th>Año</th>
+                            <th>Ubicación</th>
+                            <th>Dias Stock</th>
+                            <th>FRA.Compra</th>
+                            <th>IDV</th>
+                            <th>Número de serie</th>
+                            <th>Categoría</th>
+                            <th>Estatus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas se agregarán aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="button-container">
+                <button class="button">Anterior</button>
+                <button class="button">Siguiente</button>
+            </div>
         </div>
 
-        <!-- Tabla de vehículos -->
-        <div class="table-container">
-            <table id="tablaVehiculos">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Número de serie</th>
-                        <th>Color</th>
-                        <th>Modelo</th>
-                        <th>Categoría</th>
-                        <th>Ubicación</th>
-                        <th>Estatus</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Las filas se agregarán aquí dinámicamente -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Botones de navegación -->
-        <div class="button-container">
-            <button class="button">Anterior</button>
-            <button class="button">Siguiente</button>
-        </div>
-    </div>
-
-    <script src="JS/menuDesplegable.js"></script>
+        <script src="JS/menuDesplegable.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,146 @@
+:root {
+    --rojo-principal: #E61610;
+    --negro-principal: #000;
+    --gris-oscuro: #606060;
+    --texto-claro: #FFF;
+    --border-radius: 200px;
+    --transition-time: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--negro-principal);
+    color: var(--texto-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+.form-container {
+    width: 350px;
+    padding: 30px;
+    background: var(--negro-principal);
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #bbb;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--gris-oscuro);
+    color: var(--texto-claro);
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--rojo-principal);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-time);
+}
+
+button:hover {
+    background-color: #790905;
+}
+
+.contenedor-auto {
+    position: relative;
+    width: fit-content;
+}
+
+
+.mancha {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: var(--rojo-principal);
+    border-radius: 253% 158% 132% 305% / 239% 273% 105% 157%;
+    rotate: 90deg;
+    translate: 50px;
+    top: 10px;
+    right: 50px;
+    z-index: -1;
+}
+
+.mancha-negro {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border-radius: 100px;
+    right: 250px;
+    bottom: 530px;
+}
+
+.imagen-auto {
+    width: 550px;
+    top: 200px;
+    margin-right: 5px;
+    right: 30px;
+    position: relative;
+    z-index: 1;
+}

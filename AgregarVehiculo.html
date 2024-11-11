@@ -7,77 +7,9 @@
     <title>Agregar Vehículo</title>
     <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS/styles.css">
-
-    <style>
-        .form-container {
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            max-width: 800px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            background-color: #f4f4f4;
-        }
-
-        .form-item {
-            display: flex;
-            flex-direction: column;
-            width: 48%;
-        }
-
-        .form-item label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .form-item input[type="text"],
-        .form-item select {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        .form-container button {
-            padding: 10px;
-            background-color: #c8102e;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .form-container button:hover {
-            background-color: #a00e24;
-        }
-    </style>
 </head>
 
 <body>
-
-    <!-- Header con botón de menú -->
-    <header>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
-        <h1>Menú Principal</h1>
-    </header>
-
-
-    <!-- Barra lateral izquierda -->
-    <div class="sidebar" id="sidebar">
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
-        <h2>Menú</h2>
-        <ul>
-            <li><a href="MenuPrincipal.html">Menú Principal</a></li>
-            <li><a href="Inventario.html">Inventario</a></li>
-            <li><a href="Mover.html">Mover</a></li>
-            <li><a href="MarcarVehiculo.html">Marcar</a></li>
-            <li><a href="Vehiculo.html">Vehículo</a></li>
-        </ul>
-    </div>
 
     <!-- Contenido principal -->
     <div class="main-content" id="main-content">
@@ -160,15 +92,9 @@
                 </select>
             </div>
 
-            <button type="button" onclick="agregarVehiculo()">Agregar Vehículo</button>
+            <button type="button" class="button-extra" onclick="agregarVehiculo()">Agregar Vehículo</button>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Morris Garages, todos los derechos reservados</p>
-    </footer>
-
     <script>
         function agregarVehiculo() {
             // Aquí puedes agregar la lógica para manejar la adición del vehículo
@@ -177,7 +103,6 @@
     </script>
 
     <!-- Script para abrir/cerrar el menú -->
-    <script src="JS/menuDesplegable.js"></script>
 </body>
 
 </html>

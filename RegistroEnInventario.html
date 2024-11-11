@@ -12,27 +12,6 @@
 
 <body>
 
-    <!-- Header con botón de menú -->
-    <div class="header">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
-        <h1>Registrar un Vehículo en Inventario</h1>
-    </div>
-
-
-    <!-- Barra lateral izquierda -->
-    <div class="sidebar" id="sidebar">
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
-        <h2>Menú</h2>
-        <ul>
-            <li><a href="MenuPrincipal.html">Menú Principal</a></li>
-            <li><a href="Inventario.html">Inventario</a></li>
-            <li><a href="Mover.html">Mover</a></li>
-            <li><a href="MarcarVehiculo.html">Marcar</a></li>
-            <li><a href="Vehiculo.html">Vehículo</a></li>
-        </ul>
-    </div>
-
     <!-- Contenido principal -->
     <div class="main-content" id="main-content">
         <div class="main-content" id="main-content">
@@ -62,17 +41,12 @@
                     <option value="3">Exhibición</option>
                 </select>
 
-                <button class="button" style="margin-top: 10px;">Agregar vehículo</button>
+                <button  onclick="redirigir('AgregarVehiculo.html')" >Agregar vehículo</button>
             </section>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>© 2024 Morris Garages, todos los derechos reservados</p>
-    </div>
 
-    <!-- Script para abrir/cerrar el menú -->
     <script src="JS/menuDesplegable.js"></script>
 
     <script>

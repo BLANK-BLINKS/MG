@@ -10,71 +10,42 @@
 </head>
 
 <body>
-    <!-- Header con botón de menú -->
-    <header>
-        <button id="menu-btn" class="menu-button" onclick="toggleMenu()">☰</button>
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
-        <h1>Menú Principal</h1>
-    </header>
-    
-
-
-    <!-- Barra lateral izquierda -->
-    <div class="sidebar" id="sidebar">
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
-        <h2>Menú</h2>
-        <ul>
-            <li><a href="MenuPrincipal.html">Menú Principal</a></li>
-            <li><a href="Inventario.html">Inventario</a></li>
-            <li><a href="Mover.html">Mover</a></li>
-            <li><a href="MarcarVehiculo.html">Marcar</a></li>
-            <li><a href="Vehiculo.html">Vehículo</a></li>
-        </ul>
-    </div>
 
     <!-- Contenido principal -->
-    <div class="main-content" id="main-content">
-        <div class="background">
-            <h2>Nueva orden de inventario</h2>
-            <p id="fecha"></p>
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Número de serie</th>
-                            <th>Color</th>
-                            <th>Modelo</th>
-                            <th>Categoría</th>
-                            <th>Ubicación</th>
-                            <th>Estatus</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabla-cuerpo">
-                        <!-- Las filas se agregarán aquí dinámicamente -->
-                    </tbody>
-                </table>
-            </div>
-            <div class="button-container">
-                <a href="RegistroEnInventario.html" class="button">
-                    <img src="IMG/add-icon.png" alt="Agregar QR"> Agregar vehículo
-                </a>
-                
-                <a href="#" class="button">
-                    <img src="IMG/finish-icon.png" alt="Finalizar"> Finalizar Inventario
-                </a>
-            </div>
+    <h1>Nueva orden de inventario</h1>
+    <div class="search-container">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Número de serie</th>
+                        <th>Color</th>
+                        <th>Modelo</th>
+                        <th>Categoría</th>
+                        <th>Ubicación</th>
+                        <th>Estatus</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-cuerpo">
+                    <!-- Las filas se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
         </div>
+        <div class="button-container">
+            <button class="qr-button" onclick="redirigir('RegistroEnInventario.html')">
+                <i class="fa-solid fa-qrcode"></i>
+                <p>Agregar inventario</p>
+            </button>
+            <button class="qr-button">
+                <i class="fa-solid fa-check"></i>
+                Finalizar Inventario
+            </button>
+        </div>
+
     </div>
 
-
-
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Morris Garages, todos los derechos reservados</p>
-    </footer>
 
     <!-- Script para abrir/cerrar el menú -->
     <script src="JS/menuDesplegable.js"></script>

@@ -11,23 +11,36 @@
 </head>
 
 <body>
-    <h2>Inventario</h2>
-    <input type="text" placeholder="Buscar Inventario" id="buscar-inventario">
-    <div>
-        <table border="1" id="tabla-registros">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Fecha</th>
-                    <th>Responsable</th>
-                    <th>Vehículos Registrados</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Las filas se agregarán aquí dinámicamente -->
-            </tbody>
-        </table>
+    <h1>Inventario</h1>
+    <div class="search-container">
+        <input type="text" placeholder="Buscar Inventario" id="buscar-inventario">
+        <div class="table-container">
+            <table border="1" id="tabla-registros">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fecha</th>
+                        <th>Responsable</th>
+                        <th>Vehículos Registrados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Botones de navegación -->
+        <div class="button-container">
+            <button class="button-extra">
+                <p>Exportar a Excel</p>
+            </button>
+
+            <button class="button-extra">
+                <p>Exportar a PDF</p>
+            </button>
+        </div>
     </div>
+
 </body>
 
 </html>

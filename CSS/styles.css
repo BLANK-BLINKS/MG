@@ -103,7 +103,7 @@ header {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     margin-left: 250px;
-    padding: 80px 20px 20px 20px;
+    padding: 90px 200px 30px 80px;
     width: 100%;
     background-color: #f4f4f4;
     transition: margin-left 0.3s ease;
@@ -111,7 +111,7 @@ header {
     gap: 2px;
 }
 
-.sidebar.closed + .main-content {
+.sidebar.closed+.main-content {
     margin-left: 0;
 }
 
@@ -139,11 +139,36 @@ footer {
     color: #fff;
 }
 
+/* Contenedor principal para el botón QR y el contenido del formulario */
+.main-container {
+    display: grid;
+    align-items: flex-start;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.qr-button {
+    flex-shrink: 0; 
+    width: 120px;
+}
+
+.form-content {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
 /* Botones de acción */
 button {
-    width: 150px;
-    height: 100px;
-    padding: 10px;
+    width: 250px;
+    height: 200px;
     font-size: 16px;
     color: #fff;
     background-color: var(--rojo-principal);
@@ -155,9 +180,9 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
     text-align: center;
 }
+
 .button-extra {
     width: 100px;
     height: 50px;
@@ -176,20 +201,29 @@ button {
     text-align: center;
 }
 
-.button:hover, .button-extra:hover {
+.button:hover,
+.button-extra:hover {
     background-color: #790905;
     transform: translateY(-3px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.button:active, .button-extra:active {
+.button:active,
+.button-extra:active {
     transform: translateY(1px);
 }
 
 /* Estilo específico para botones extra pequeños */
 .button-extra {
-    width: 100px;
+    width: 120px;
+    height: 70px;
     font-size: 14px;
+}
+
+.button-extra i {
+    font-size: 20px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
 }
 
 /* Contenedor de botones */
@@ -199,6 +233,25 @@ button {
     margin-top: 10px;
 }
 
+button:hover i {
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:hover {
+    background-color: #790905;
+    transform: translateY(-3px);
+}
+
+button i {
+    font-size: 50px;
+    height: 70px;
+    transition: transform 0.2s ease-in-out;
+}
+
 /* Tablas */
 table {
     width: 100%;
@@ -206,11 +259,14 @@ table {
     margin-top: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: left;
 }
@@ -230,14 +286,16 @@ tbody tr:hover {
 }
 
 /* Formularios */
-.details-form label, .form-container label {
+.details-form label,
+.form-container label {
     font-weight: bold;
     margin-top: 10px;
 }
-
-.details-form input, .form-container select, input[type="text"], select {
-    width: 100%;
-    max-width: 300px;
+.details-form input, 
+.form-container select, 
+input[type="text"], 
+select {
+    width: 100%;           
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -247,6 +305,7 @@ tbody tr:hover {
     box-sizing: border-box;
 }
 
+
 .details-form input[readonly] {
     background-color: #e9e9e9;
 }
@@ -254,17 +313,21 @@ tbody tr:hover {
 /* Estilo para el botón de QR */
 .qr-button {
     display: flex;
+    width: 150px;
+    height: 120px;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     cursor: pointer;
     color: #790905;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    color: white;
 }
 
 /* Campo de búsqueda */
-#buscar, #buscar-inventario {
+#buscar,
+#buscar-inventario {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;

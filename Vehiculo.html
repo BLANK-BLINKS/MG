@@ -7,117 +7,13 @@
     <title>Vehículos</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
-    <style>
-        /* Ajuste de la sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: #333;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 80px;
-            position: fixed;
-            height: 100%;
-            left: 0;
-            top: 0;
-            transition: transform 0.3s ease;
-            z-index: 1000;
-        }
-
-        .sidebar.closed {
-            transform: translateX(-250px);
-        }
-
-        .sidebar img {
-            width: 80px;
-            margin-bottom: 20px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            width: 100%;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            width: 100%;
-        }
-
-        .sidebar ul li a {
-            display: flex;
-            align-items: center;
-            padding: 15px 20px;
-            text-decoration: none;
-            color: white;
-            transition: background 0.3s;
-        }
-
-        .sidebar ul li a:hover {
-            background-color: #555;
-        }
-
-        /* Ajuste del contenido principal */
-        .main-content {
-            margin-left: 250px;
-            /* Ajusta este valor si cambias el ancho de la sidebar */
-            padding: 80px 20px 20px 20px;
-            transition: margin-left 0.3s ease;
-        }
-
-        .main-content.collapsed {
-            margin-left: 0;
-        }
-
-        /* Header */
-        .header {
-            background-color: #000;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        /* Botón de menú */
-        .menu-btn {
-            font-size: 24px;
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Barra lateral izquierda -->
-    <div class="sidebar" id="sidebar">
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
-        <h2>Menú</h2>
-        <ul>
-            <li><a href="MenuPrincipal.html">Menú Principal</a></li>
-            <li><a href="Inventario.html">Inventario</a></li>
-            <li><a href="Mover.html">Mover</a></li>
-            <li><a href="MarcarVehiculo.html">Marcar</a></li>
-            <li><a href="Vehiculo.html">Vehículo</a></li>
-        </ul>
-    </div>
 
-    <!-- Header con botón de menú -->
-    <div class="header">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
-        <h1>Vehículos</h1>
-    </div>
 
     <!-- Contenido principal -->
-    <div class="main-content" id="main-content">
+    <div>
         <h1>Vehículos</h1>
         <div class="search-container">
             <input type="text" id="buscar" placeholder="Buscar vehículo...">
@@ -160,12 +56,11 @@
 
             <!-- Botones de navegación -->
             <div class="button-container">
-                <button class="button">Anterior</button>
-                <button class="button">Siguiente</button>
+                <button class="button-extra">Anterior</button>
+                <button class="button-extra">Siguiente</button>
             </div>
         </div>
-
-        <script src="JS/menuDesplegable.js"></script>
+     </div>
 </body>
 
 </html>

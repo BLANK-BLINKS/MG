@@ -7,77 +7,71 @@
     <title>Menú Principal</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
     <!-- Header con botón de menú -->
-    <div class="header">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <header>
+        <button id="menu-btn" class="menu-button" onclick="toggleMenu()">☰</button>
         <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
-        <h1>Menú Principal</h1>
-    </div>
+        <h1>MG Motor</h1>
+    </header>
+
 
     <!-- Barra lateral izquierda -->
     <div class="sidebar" id="sidebar">
         <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
         <h2>Menú</h2>
+        <!-- Menu en menu.html -->
         <ul>
             <li><a href="MenuPrincipal.html">Menú Principal</a></li>
-            <li><a href="Inventario.html">Inventario</a></li>
-            <li><a href="Mover.html">Mover</a></li>
-            <li><a href="MarcarVehiculo.html">Marcar</a></li>
-            <li><a href="Vehiculo.html">Vehículo</a></li>
-            <br><br>
+            <li><a href="#" onclick="redirigir('Inventario.html')">Inventario</a></li>
+            <li><a href="#" onclick="redirigir('Mover.html')">Mover</a></li>
+            <li><a href="#" onclick="redirigir('MarcarVehiculo.html')">Marcar</a></li>
+            <li><a href="#" onclick="redirigir('Vehiculo.html')">Vehículo</a></li>
             <li><a href="index.html">Cerrar Sesión</a></li>
 
         </ul>
+
     </div>
 
     <!-- Contenido principal -->
     <div class="main-content" id="main-content">
 
-        <a href="nuevaOrdenInventario.html">
-            <button>
-                <img src="IMG/add-list.png" alt="Inventario IMG" width="200" height="200"
-                    onclick="agregarInventario()" />
-                Realizar Inventario
-            </button>
-        </a>
+        <button onclick="redirigir('nuevaOrdenInventario.html')">
+            <i class="fas fa-list"></i>
+            Agregar inventario
+        </button>
 
-        <a href="Vehiculo.html">
-            <button>
-                <img src="IMG/coche.png" alt="Inventario IMG" width="200" height="200" />
-                Gestión de Vehículo
-            </button>
-        </a>
+        <button onclick="redirigir('Vehiculo.html')">
+            <i class="fa-solid fa-car"></i>
+            Gestión de Vehículo
+        </button>
 
-        <a href="Mover.html">
-            <button>
-                <img src="IMG/accept-car.png" alt="Inventario IMG" width="200" height="200" />
-                Mover Vehiculo
-            </button>
-        </a>
+        <button onclick="redirigir('Mover.html')">
+            <i class="fa-solid fa-car-side"></i>
+            Mover Vehiculo
+        </button>
 
-        <a href="Inventario.html">
-            <button>
-                <img src="IMG/folder.png" alt="Inventario IMG" width="200" height="200" />
-                Gestión de Inventarios
-            </button>
-        </a>
+        <button onclick="redirigir('Inventario.html')">
+            <i class="fa-solid fa-folder"></i>
+            Gestión de Inventarios
+        </button>
 
-        <a href="MarcarVehiculo.html">
-            <button>
-                <img src="IMG/marcarVehiculo.png" alt="Inventario IMG" width="200" height="200" />
-                Marcar Vehículo
-            </button>
-        </a>
+
+        <button onclick="redirigir('MarcarVehiculo.html')">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            Marcar Vehículo
+        </button>
+
     </div>
 
     <!-- Footer -->
-    <div class="footer">
+    <footer>
         <p>© 2024 Morris Garages, todos los derechos reservados</p>
-    </div>
+    </footer>
 
     <!-- Script para abrir/cerrar el menú -->
     <script src="JS/menuDesplegable.js"></script>

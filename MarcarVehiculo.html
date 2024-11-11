@@ -6,103 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mover Vehículo</title>
     <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
-    <link rel="stylesheet" href="CSS/styles.css"> <!-- Asegúrate de ajustar la ruta -->
-    <style>
-        /* Ajustes adicionales para la disposición */
-        .main-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px;
-            padding: 80px 20px;
-        }
-
-        .qr-button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 150px;
-            height: 150px;
-            background-color: #c8102e;
-            color: white;
-            border-radius: 10px;
-            cursor: pointer;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .details-box {
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #f4f4f4;
-            max-width: 300px;
-            min-width: 250px;
-        }
-
-        .details-box p {
-            margin: 5px 0;
-        }
-
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-            max-width: 250px;
-        }
-
-        .form-container select,
-        .form-container button {
-            width: 100%;
-            max-width: 200px;
-        }
-
-        .button {
-            padding: 10px 20px;
-            background-color: #c8102e;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .button img {
-            margin-right: 5px;
-            width: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
 
-    <!-- Header con botón de menú -->
-    <div class="header">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
-        <h1>Marcar Vehículo</h1>
-    </div>
-
-    <!-- Barra lateral izquierda -->
-    <div class="sidebar" id="sidebar">
-        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
-        <h2>Menú</h2>
-        <ul>
-            <li><a href="MenuPrincipal.html">Menú Principal</a></li>
-            <li><a href="Inventario.html">Inventario</a></li>
-            <li><a href="Mover.html">Mover</a></li>
-            <li><a href="MarcarVehiculo.html">Marcar</a></li>
-            <li><a href="Vehiculo.html">Vehículo</a></li>
-        </ul>
-    </div>
-
     <!-- Contenido principal -->
-    <div class="main-content" id="main-content">
+    <div>
         <!-- Botón Escanear QR -->
         <div class="qr-button">
             <img src="IMG/qr-icon.png" alt="Escanear QR" style="width: 50px; height: 50px;">
@@ -142,19 +52,12 @@
 
             </select>
 
-            <button class="button">
+            <button class="button-extra">
                 <img src="IMG/move-icon.png" alt="Mover"> Mover vehículo
             </button>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>© 2024 Morris Garages, todos los derechos reservados</p>
-    </div>
-
-    <!-- Script para abrir/cerrar el menú -->
-    <script src="JS/menuDesplegable.js"></script>
 </body>
 
 </html>

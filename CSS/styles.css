@@ -1,5 +1,12 @@
- /* Estilos generales */
- * {
+:root {
+    --rojo-principal: #E61610;
+    --negro-principal: #000;
+    --border-radius: 30px;
+    --transition-time: 0.3s;
+}
+
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,11 +17,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: #333;
+    background-color: #f5f5f5;
 }
 
 /* Header */
-.header {
-    background-color: #000;
+header {
+    background-color: var(--negro-principal);
     color: white;
     width: 100%;
     padding: 10px 20px;
@@ -28,19 +37,9 @@ body {
     height: 60px;
 }
 
-/* Botón de menú dentro del header */
-.menu-btn {
-    font-size: 24px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 .logo {
     margin-right: auto;
     padding-left: 15px;
-    /* Mueve el logo al extremo derecho */
 }
 
 /* Barra lateral izquierda */
@@ -57,7 +56,6 @@ body {
     left: 0;
     top: 0;
     transition: transform 0.3s ease;
-    transform: translateX(0);
     z-index: 1;
 }
 
@@ -78,11 +76,6 @@ body {
 .sidebar ul {
     list-style: none;
     width: 100%;
-    padding: 0;
-}
-
-.sidebar ul li {
-    width: 100%;
 }
 
 .sidebar ul li a {
@@ -92,39 +85,38 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
-    transition: background 0.3s, color 0.3s; /* Agregamos la transición del color */
+    transition: background 0.3s, color 0.3s;
 }
 
 .sidebar ul li a:hover {
     background-color: #555;
-    color: #e60000; /* Cambia el color del texto a rojo */
+    color: #e60000;
 }
 
 .sidebar ul li a i {
     margin-right: 10px;
 }
 
-
-
 /* Contenido principal */
 .main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
     margin-left: 250px;
-    /* Espacio reservado para la barra lateral */
     padding: 80px 20px 20px 20px;
-    /* Espacio para el header y el padding general */
     width: 100%;
     background-color: #f4f4f4;
     transition: margin-left 0.3s ease;
     flex: 1;
+    gap: 2px;
 }
 
-/* Ajuste del contenido cuando la barra lateral está cerrada */
-.main-content.collapsed {
+.sidebar.closed + .main-content {
     margin-left: 0;
 }
 
 /* Footer */
-.footer {
+footer {
     background-color: #333;
     color: white;
     text-align: center;
@@ -132,81 +124,163 @@ body {
     width: 100%;
 }
 
-/* Estilos adicionales para la tabla y botones */
-.table-container {
-    overflow-x: auto;
-    margin-top: 20px;
+.menu-button {
+    font-size: 20px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+.menu-button:hover {
+    color: #fff;
 }
 
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+/* Botones de acción */
+button {
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--rojo-principal);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     text-align: center;
 }
-
-table th {
-    background-color: #333;
-    color: white;
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.button {
-    padding: 10px 20px;
-    background-color: #c8102e;
-    color: white;
+.button-extra {
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    font-size: 14px;
+    color: #fff;
+    background-color: var(--rojo-principal);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    gap: 5px;
+    text-align: center;
 }
 
-.button img {
-    margin-right: 8px;
-    height: 20px;
+.button:hover, .button-extra:hover {
+    background-color: #790905;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.button:hover {
-    background-color: #a00e24;
+.button:active, .button-extra:active {
+    transform: translateY(1px);
 }
 
-.actions {
+/* Estilo específico para botones extra pequeños */
+.button-extra {
+    width: 100px;
+    font-size: 14px;
+}
+
+/* Contenedor de botones */
+.button-container {
     display: flex;
-    justify-content: center;
     gap: 10px;
+    margin-top: 10px;
 }
 
-.actions button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.actions button img {
-    height: 20px;
-    width: 20px;
-}
-
-.button-container-right {
-    display: flex;
-    justify-content: flex-end; /* Alinea los botones al final (derecha) */
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
-.button-container-right .button {
-    margin-left: 10px; /* Agrega un margen entre los botones */
+table, th, td {
+    border: 1px solid #ddd;
 }
 
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #790905;
+    color: #fff;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Formularios */
+.details-form label, .form-container label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.details-form input, .form-container select, input[type="text"], select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.details-form input[readonly] {
+    background-color: #e9e9e9;
+}
+
+/* Estilo para el botón de QR */
+.qr-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #790905;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Campo de búsqueda */
+#buscar, #buscar-inventario {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}

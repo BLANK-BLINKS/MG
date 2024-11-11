@@ -136,6 +136,15 @@ button:hover {
     bottom: 530px;
 }
 
+@keyframes moverDerechaIzquierda {
+    0% {
+        right: -600px; /* Empieza fuera de la pantalla a la derecha */
+    }
+    100% {
+        right: 30px; /* Llega a la posición final */
+    }
+}
+
 .imagen-auto {
     width: 550px;
     top: 200px;
@@ -143,4 +152,5 @@ button:hover {
     right: 30px;
     position: relative;
     z-index: 1;
+    animation: moverDerechaIzquierda 2s ease-out; /* Aplica la animación */
 }

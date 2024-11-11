@@ -111,6 +111,10 @@ header {
     gap: 2px;
 }
 
+.main-content.collapsed{
+    margin-left: 0;
+}
+
 .sidebar.closed+.main-content {
     margin-left: 0;
 }
@@ -253,63 +257,76 @@ button i {
 }
 
 /* Tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
+
+.table-container {
+    overflow-x: auto;
     margin-top: 20px;
 }
 
-table,
-th,
-td {
-    border: 1px solid #ddd;
-}
-
-th,
-td {
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #790905;
-    color: #fff;
-    font-weight: bold;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Formularios */
-.details-form label,
-.form-container label {
-    font-weight: bold;
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 10px;
 }
-.details-form input, 
-.form-container select, 
-input[type="text"], 
-select {
-    width: 100%;           
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+
+table th, table td {
     border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+
+
+/* Formularios */
+.form-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f4f4f4;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.form-item label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-item input[type="text"],
+.form-item select {
+    padding: 8px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
+    width: 100%;
 }
 
-
-.details-form input[readonly] {
-    background-color: #e9e9e9;
+.form-container button {
+    padding: 10px;
+    background-color: #c8102e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
 }
 
+.form-container button:hover {
+    background-color: #a00e24;
+}
 /* Estilo para el botón de QR */
 .qr-button {
     display: flex;

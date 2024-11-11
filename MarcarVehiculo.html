@@ -13,51 +13,48 @@
     <!-- Contenedor principal -->
     <div class="main-container">
 
-            <!-- Botón Escanear QR -->
-            <button class="qr-button">
-                <i class="fa-solid fa-qrcode"></i>
-                <p>Escanear QR</p>
-            </button>
+        <!-- Botón Escanear QR -->
+        <button class="qr-button">
+            <i class="fa-solid fa-qrcode"></i>
+            <p>Escanear QR</p>
+        </button>
 
-            <!-- Contenedor de formularios y detalles -->
-            <div class="form-content">
-                <!-- Formulario de detalles dinámico -->
-                <form class="details-form" id="detailsForm">
-                    <label for="numeroSerie">Número de serie:</label>
-                    <input type="text" id="numeroSerie" name="numeroSerie" readonly>
+        <!-- Contenedor de formularios y detalles -->
+        <div class="form-container">
+            <!-- Formulario de detalles dinámico -->
+            <form class="details-form" id="detailsForm">
+                <label for="numeroSerie">Número de serie:</label>
+                <input type="text" id="numeroSerie" name="numeroSerie" readonly>
 
-                    <label for="categoria">Categoría:</label>
-                    <input type="text" id="categoria" name="categoria" readonly>
+                <label for="categoria">Categoría:</label>
+                <input type="text" id="categoria" name="categoria" readonly>
 
-                    <label for="color">Color:</label>
-                    <input type="text" id="color" name="color" readonly>
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" readonly>
 
-                    <label for="modelo">Modelo:</label>
-                    <input type="text" id="modelo" name="modelo" readonly>
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" readonly>
 
-                    <label for="ubicacion">Ubicación:</label>
-                    <input type="text" id="ubicacion" name="ubicacion" readonly>
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion" readonly>
 
-                    <label for="estatus">Estatus:</label>
-                    <input type="text" id="estatus" name="estatus" readonly>
-                </form>
+                <label for="estatus">Estatus:</label>
+                <input type="text" id="estatus" name="estatus" readonly>
+            </form>
 
-                <!-- Formulario de nueva ubicación y botón -->
-                <div class="form-container">
-                    <label for="nuevaUbicacion">Nuevo Estatus:</label>
-                    <select id="nuevaUbicacion" name="nuevaUbicacion">
-                        <option value="1">Disponible</option>
-                        <option value="2">Venta</option>
-                        <option value="3">En trato</option>
-                        <option value="4">Servicio</option>
-                        <option value="5">Entregado</option>
-                    </select>
-
-                    <button class="button-extra">
-                        <i class="fa-solid fa-file-invoice-dollar"></i> Mover vehículo
-                    </button>
-                </div>
-            </div>
+            <!-- Formulario de nueva ubicación y botón -->
+            <label for="nuevaUbicacion">Nuevo Estatus:</label>
+            <select id="nuevaUbicacion" name="nuevaUbicacion">
+                <option value="1">Disponible</option>
+                <option value="2">Venta</option>
+                <option value="3">En trato</option>
+                <option value="4">Servicio</option>
+                <option value="5">Entregado</option>
+            </select>
+        </div>
+        <button class="button-extra">
+            <i class="fa-solid fa-file-invoice-dollar"></i> Mover vehículo
+        </button>
     </div>
 </body>
 

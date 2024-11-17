@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actualizar Vehículo</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <!-- Barra lateral izquierda -->
+        <div class="sidebar" id="sidebar">
+            <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="MenuPrincipal.html">Menú Principal</a></li>
+                <li><a href="Inventario.html">Inventario</a></li>
+                <li><a href="Mover.html">Mover</a></li>
+                <li><a href="MarcarVehiculo.html">Marcar</a></li>
+                <li><a href="Vehiculo.html">Vehículo</a></li>
+            </ul>
+        </div>
+
+        <!-- Header con botón de menú -->
+        <div class="header">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
+            <h1>Actualizar un Vehículo</h1>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="main-content" id="main-content">
+            <!-- Formulario -->
+            <div class="form-container">
+            
+            <div class="form-item">
+                    <label for="ActualizarNumeroSerie">Número de serie</label>
+                    <input type="text" id="ActualizarNumeroSerie" disabled>
+                </div>
+            
+            <div class="form-item">
+                <label for="ActualizarModelo">Modelo</label>
+                <input type="text" id="ActualizarModelo" placeholder="Ingrese el modelo">
+            </div>
+            
+            <div class="form-item">
+                <label for="ActualizarColor">Color</label>
+                <input type="text" id="ActualizarColor" placeholder="Ingrese el modelo">
+            </div>
+
+            <div class="form-item">
+                <label for="ActualizarTapiceria">Tapiceria</label>
+                <input type="text" id="ActualizarTapiceria" placeholder="Ingrese el color de la Tapiceria">
+            </div>
+
+            <div class="form-item">
+                <label for="ActualizarAnio">Año</label>
+                <input type="text" id="ActualizarAnio" placeholder="Ingrese Año">
+            </div>
+
+            <div class="form-item">
+                <label for="ActualizarIDV">IDV</label>
+                <input type="text" id="ActualizarIDV" placeholder="Ingrese el IDV">
+            </div>
+            
+            <div class="form-item">
+                <label for="ActualizarFraCompra">FRA. Compra</label>
+                <input type="text" id="ActualizarFraCompra" placeholder="Ingrese el FRA. Compra">
+            </div>
+            
+            <div class="form-item">
+                <label for="ActualizarDiasStock">Días Stock</label>
+                <input type="text" id="ActualizarDiasStock" placeholder="Ingrese los días en stock">
+            </div>
+            
+            <div class="form-item">
+                <label for="ActualizarUbicacion">Ubicación</label>
+                <select id="ActualizarUbicacion" >
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="1">Patio</option>
+                    <option value="2">Exhibición</option>
+                    <option value="5">Almacen</option>
+                    <option value="6">Lavado</option>
+                    <option value="7">San Luis</option>
+                    <option value="8">En tránsito</option>
+                    <option value="9">Entrega</option>
+                    <option value="3">Taller</option>
+                    <option value="4">Servicio</option>
+                </select>
+            </div>
+
+            <div class="form-item">
+                <label for="ActualizarCategoria">Categoría</label>
+                <select id="ActualizarCategoria">
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="1">Nuevo</option>
+                    <option value="2">Seminuevo</option>
+                    <option value="3">Servicio</option>
+                </select>
+            </div>
+
+            <div class="form-item">
+                <label for="ActualizarEstatus">Estatus</label>
+                <select id="ActualizarEstatus">
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="1">Disponible</option>
+                    <option value="2">En trato</option>
+                    <option value="3">Vendido</option>
+                    <option value="4">Facturado</option>
+                    <option value="5">Entregado</option>
+                    <option value="6">Servicio</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="ActualizarVehiculo()">Actualizar Vehículo</button>
+            
+        </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 Morris Garages, todos los derechos reservados</p>
+        </div>
+        
+        
+    <script src="JS/menuDesplegable.js"></script>
+    <script src="JS/ModificarVehiculos.js"></script>
+    </body>   
+</html>

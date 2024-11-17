@@ -1,0 +1,367 @@
+:root {
+    --rojo-principal: #E61610;
+    --negro-principal: #000;
+    --border-radius: 30px;
+    --transition-time: 0.3s;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    background-color: var(--negro-principal);
+    color: white;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 60px;
+}
+
+.logo {
+    margin-right: auto;
+    padding-left: 15px;
+}
+
+/* Barra lateral izquierda */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.sidebar.closed {
+    transform: translateX(-250px);
+}
+
+.sidebar img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+    color: #e60000;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+/* Contenido principal */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    margin-left: 250px;
+    padding: 90px 200px 30px 80px;
+    width: 100%;
+    background-color: #f4f4f4;
+    transition: margin-left 0.3s ease;
+    flex: 1;
+    gap: 2px;
+}
+
+.main-content.collapsed{
+    margin-left: 0;
+}
+
+.sidebar.closed+.main-content {
+    margin-left: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.menu-button {
+    font-size: 20px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-button:hover {
+    color: #fff;
+}
+
+/* Contenedor principal para el botón QR y el contenido del formulario */
+.main-container {
+    display: grid;
+    align-items: flex-start;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.qr-button {
+    flex-shrink: 0; 
+    width: 120px;
+}
+
+.form-content {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+/* Botones de acción */
+button {
+    width: 250px;
+    height: 200px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--rojo-principal);
+    text-decoration: none;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button-extra {
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    font-size: 14px;
+    color: #fff;
+    background-color: var(--rojo-principal);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    gap: 5px;
+    text-align: center;
+}
+
+.button:hover,
+.button-extra:hover {
+    background-color: #790905;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:active,
+.button-extra:active {
+    transform: translateY(1px);
+}
+
+/* Estilo específico para botones extra pequeños */
+.button-extra {
+    width: 120px;
+    height: 70px;
+    font-size: 14px;
+}
+
+.button-extra i {
+    font-size: 20px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button:hover i {
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:hover {
+    background-color: #790905;
+    transform: translateY(-3px);
+}
+
+button i {
+    font-size: 50px;
+    height: 70px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Tablas */
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+
+
+/* Formularios */
+.form-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f4f4f4;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.form-item label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-item input[type="text"],
+.form-item select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-container button {
+    padding: 10px;
+    background-color: #c8102e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-container button:hover {
+    background-color: #a00e24;
+}
+/* Estilo para el botón de QR */
+.qr-button {
+    display: flex;
+    width: 150px;
+    height: 120px;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #790905;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+/* Campo de búsqueda */
+#buscar,
+#buscar-inventario {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,319 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Botón de menú */
+.menu-btn {
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.logo {
+    margin-right: auto;
+    padding-left: 15px;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.closed {
+    transform: translateX(-250px);
+}
+
+.sidebar img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+    color: #e60000;
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: 250px;
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    transition: margin-left 0.3s ease;
+    flex: 1;
+    display: block; /* Cambié de flex a block si es necesario para preservar el flujo natural del contenido */
+}
+
+.main-content.collapsed {
+    margin-left: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Estilos adicionales */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+.button-container, .button-container-right {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button-container-right {
+    justify-content: flex-end;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #c8102e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.button img {
+    margin-right: 5px;
+    width: 20px;
+}
+
+.button:hover {
+    background-color: #a00e24;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.actions button img {
+    height: 20px;
+    width: 20px;
+}
+
+/* Formulario */
+.form-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #f4f4f4;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.form-item label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-item input[type="text"],
+.form-item select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-container button {
+    padding: 10px;
+    background-color: #c8102e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-container button:hover {
+    background-color: #a00e24;
+}
+
+.qr-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: #c8102e;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.details-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    max-width: 300px;
+    min-width: 250px;
+}
+
+.details-box p {
+    margin: 5px 0;
+}
+
+/* Nuevos estilos proporcionados */
+.details-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 800px;
+}
+
+.details-info {
+    max-width: 45%;
+}
+
+.details-info p {
+    margin: 5px 0;
+}
+
+.details-image {
+    width: 250px;
+    height: 250px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.details-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.details-buttons button {
+    padding: 10px 20px;
+    background-color: #c8102e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details-buttons button:hover {
+    background-color: #a00e24;
+}
+
+.details-buttons button.qr-button {
+    background-color: #666;
+}
+
+.details-buttons button.qr-button:hover {
+    background-color: #444;
+}

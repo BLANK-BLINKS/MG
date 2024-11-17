@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehículos</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Barra lateral izquierda -->
+    <div class="sidebar" id="sidebar">
+        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="MenuPrincipal.html">Menú Principal</a></li>
+            <li><a href="Inventario.html">Inventario</a></li>
+            <li><a href="MoverVehiculo.html">Mover</a></li>
+            <li><a href="MarcarVehiculo.html">Marcar</a></li>
+            <li><a href="Vehiculo.html">Vehículo</a></li>
+        </ul>
+    </div>
+
+    <!-- Header con botón de menú -->
+    <div class="header">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
+        <h1>Vehículos</h1>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content" id="main-content">
+        <h1>Vehículos</h1>
+        <div class="search-container">
+            <input type="text" id="buscar" placeholder="Buscar vehículo...">
+            <select id="filtrar">
+                <option value="">Filtrar por...</option>
+                <option value="nuevo">Nuevo</option>
+                <option value="seminuevo">Seminuevo</option>
+                <option value="servicio">Servicio</option>
+            </select>
+
+            <div class="button-container">
+                <a href="AgregarVehiculo.html" class="button">Agregar vehículo </a>
+            </div>
+
+            <!-- Tabla de vehículos -->
+            <div class="table-container">
+                <table id="tablaVehiculos">
+                    <thead>
+                        <tr>
+                            <th>Número de serie</th>
+                            <th>Modelo</th>
+                            <th>Color</th>
+                            <th>Tapiceria</th>
+                            <th>Año</th>
+                            <th>IDV</th>
+                            <th>FRA.Compra</th>
+                            <th>Dias Stock</th>
+                            <th>Ubicación</th>
+                            <th>Categoría</th>
+                            <th>Estatus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas se agregarán aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="button-container">
+                <button class="button">Anterior</button>
+                <button class="button">Siguiente</button>
+            </div>
+        </div>
+
+        <script src="JS/menuDesplegable.js"></script>
+        <script src="JS/GetAllVehiculos.js"></script>
+        <script src="JS/ModificarVehiculos.js"></script>
+</body>
+
+</html>

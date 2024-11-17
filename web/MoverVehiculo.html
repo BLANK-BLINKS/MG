@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mover Vehículo</title>
+    <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/styles.css"> <!-- Asegúrate de ajustar la ruta -->
+</head>
+
+<body>
+
+    <!-- Barra lateral izquierda -->
+    <div class="sidebar" id="sidebar">
+        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="MenuPrincipal.html">Menú Principal</a></li>
+            <li><a href="Inventario.html">Inventario</a></li>
+            <li><a href="MoverVehiculo.html">Mover</a></li>
+            <li><a href="MarcarVehiculo.html">Marcar</a></li>
+            <li><a href="Vehiculo.html">Vehículo</a></li>
+        </ul>
+    </div>
+
+    <!-- Header con botón de menú -->
+    <div class="header">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
+        <h1>Vehículos</h1>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content" id="main-content">
+        <!-- Botón Escanear QR -->
+        <div class="qr-button">
+            <img src="IMG/qr-icon.png" alt="Escanear QR" style="width: 50px; height: 50px;">
+            <p>Escanear QR</p>
+        </div>
+
+        <!-- Formulario de detalles dinámico -->
+        <form class="details-form" id="detailsForm">
+            <label for="numeroSerie">Número de serie:</label>
+            <input type="text" id="numeroSerie" name="numeroSerie" readonly>
+
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria" readonly>
+
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color" readonly>
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" readonly>
+
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" name="ubicacion" readonly>
+
+            <label for="estatus">Estatus:</label>
+            <input type="text" id="estatus" name="estatus" readonly>
+        </form>
+
+        <!-- Formulario de nueva ubicación y botón -->
+        <div class="form-container">
+            <label for="nuevaUbicacion">Nueva ubicación:</label>
+            <select id="nuevaUbicacion" name="nuevaUbicacion">
+                <option value="1">Patio</option>
+                <option value="2">Almacén</option>
+                <option value="3">Taller</option>
+                <option value="4">Exhibición</option>
+                <option value="5">Servicio</option>
+                <option value="6">Lavado</option>
+                <option value="7">San Luis</option>
+                <option value="8">En tránsito</option>
+                <option value="9">Entrega</option>
+            </select>
+            <button class="button">
+                <img src="IMG/move-icon.png" alt="Mover"> Mover vehículo
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 Morris Garages, todos los derechos reservados</p>
+    </div>
+
+    <!-- Script para abrir/cerrar el menú -->
+    <script src="JS/menuDesplegable.js"></script>
+</body>
+
+</html>

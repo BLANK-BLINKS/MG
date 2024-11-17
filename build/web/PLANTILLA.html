@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Lateral Colapsable</title>
+    <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/styles.css">
+
+</head>
+
+<body>
+
+    <!-- Header con botón de menú -->
+    <div class="header">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
+        <h1>Menú Principal</h1>
+    </div>
+    
+
+    <!-- Barra lateral izquierda -->
+    <div class="sidebar" id="sidebar">
+        <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="MenuPrincipal.html">Menú Principal</a></li>
+            <li><a href="Inventario.html">Inventario</a></li>
+            <li><a href="MoverVehiculo.html">Mover</a></li>
+            <li><a href="MarcarVehiculo.html">Marcar</a></li>
+            <li><a href="Vehiculo.html">Vehículo</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content" id="main-content">
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 Morris Garages, todos los derechos reservados</p>
+    </div>
+
+    <!-- Script para abrir/cerrar el menú -->
+    <script src="JS/menuDesplegable.js"></script>
+</body>
+
+</html>

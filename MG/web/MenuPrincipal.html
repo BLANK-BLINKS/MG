@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menú Principal</title>
+        <link rel="stylesheet" href="CSS/MenuPrincipal.css">
+        <link rel="icon" href="IMG/LogoBlancoMG.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <body>
+
+        <!-- Header con botón de menú -->
+        <header>
+            <button id="menu-btn" class="menu-button" onclick="toggleMenu()">☰</button>
+            <img src="IMG/LogoBlancoMG.png" alt="Logo de MG" class="logo" height="30px">
+            <h1>MG Motor</h1>
+        </header>
+
+
+        <!-- Barra lateral izquierda -->
+        <div class="sidebar" id="sidebar">
+            <img src="IMG/LogoBlancoMG.png" alt="Logo de MG">
+            <h2>Menú</h2>
+            <!-- Menu en menu.html -->
+            <ul>
+                <li><a href="MenuPrincipal.html">Menú Principal</a></li>
+                <li><a href="Inventario.html">Inventario</a></li>
+                <li><a href="MoverVehiculo.html">Mover</a></li>
+                <li><a href="MarcarVehiculo.html">Marcar</a></li>
+                <li><a href="Vehiculo.html">Vehiculo</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="main-content" id="main-content">
+
+            <a href="nuevaOrdenInventario.html">
+                <button><i class="fas fa-list"></i>Agregar Inventario</button>
+            </a>
+
+            <button onclick="redirigir('Vehiculo.html')">
+                <i class="fa-solid fa-car"></i>
+                Gestión de Vehículo
+            </button>
+
+            <button onclick="redirigir('Mover.html')">
+                <i class="fa-solid fa-car-side"></i>
+                Mover Vehiculo
+            </button>
+
+            <button onclick="redirigir('Inventario.html')">
+                <i class="fa-solid fa-folder"></i>
+                Gestión de Inventarios
+            </button>
+
+
+            <button onclick="redirigir('MarcarVehiculo.html')">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Marcar Vehículo
+            </button>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 Morris Garages, todos los derechos reservados</p>
+        </footer>
+
+        <!-- Script para abrir/cerrar el menú -->
+        <script src="JS/menuDesplegable.js"></script>
+    </body>
+
+</html>
